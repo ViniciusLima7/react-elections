@@ -1,21 +1,40 @@
 {
-  "name": "projeto-base-react",
-  "version": "0.1.0",
+  "name": "react-projeto-base",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
+    "@craco/craco": "6.1.1",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "11.1.0",
+    "@testing-library/user-event": "12.1.10",
+    "axios": "0.21.1",
+    "json-server": "^0.17.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "4.2.0",
+    "react-scripts": "4.0.3",
+    "react-spinners": "0.10.6",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "2.0.4",
+    "autoprefixer": "9",
+    "postcss": "7",
+    "serve": "11.3.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "craco start",
+    "build": "craco build",
+    "prod:local": "craco build && serve -s build",
+    "prod:cloud": "craco build && netlify deploy --prod --open --dir build",
+    "prod:cloud:test": "craco build && netlify deploy --open --dir build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "server": "json-server --watch elections.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
