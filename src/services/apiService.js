@@ -1,6 +1,22 @@
 import { read } from "./httpService";
 
-export async function apiGetAllCities() {
+async function apiGetAllCities() {
   const allCities = await read("/cities");
-  return allCities;
+
+  // https://www.w3schools.com/jsref/jsref_localecompare.asp
+  // Compara e Ordena os Nomes das Cidades em Ordem Alfabetica
+  return allCities.sort((a, b) => a.name.localeCompare(b.name));
 }
+
+async function apiGetAllCandidates() {
+  const allCandidates = await read("/candidates");
+  return allCandidates;
+}
+
+async function apiGetAllElections(cityId) {
+  const allElections = await read(`/election?cityId=${cityId}`);
+  //Ordena votos em Ordem Crescente
+  return allElections.sort((a, b) => a.votes - b.vptes);
+}
+
+export { apiGetAllCities, apiGetAllCandidates, apiGetAllElections };
