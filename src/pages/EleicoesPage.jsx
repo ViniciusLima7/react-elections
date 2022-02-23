@@ -82,8 +82,7 @@ export default function EleicoesPage() {
                     candidate: candidates.find(
                         candidate => candidate.id === election.candidateId
                     ),
-                }))
-                .sort((a, b) => b.votes - a.votes),
+                })),
             city: selectedCity,
         };
 
@@ -111,7 +110,7 @@ export default function EleicoesPage() {
     return (
 
         <>
-            <Header>react-elections</Header>
+            <Header>Eleições com React</Header>
             <Main>{mainJsx}</Main>
         </>
     );

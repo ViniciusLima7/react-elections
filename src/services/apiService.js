@@ -16,7 +16,7 @@ async function apiGetAllCandidates() {
 async function apiGetAllElections(cityId) {
   const allElections = await read(`/election?cityId=${cityId}`);
   //Ordena votos em Ordem Crescente
-  return allElections.sort((a, b) => a.votes - b.vptes);
+  return allElections.sort((a, b) => b.votes - a.votes);
 }
 
 export { apiGetAllCities, apiGetAllCandidates, apiGetAllElections };

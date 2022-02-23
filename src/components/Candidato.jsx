@@ -1,5 +1,5 @@
 import Avatar from './Avatar';
-import Elected from './Eleito';
+import Eleito from './Eleito';
 import NumberFormatter from './NumberFormatter';
 import Percentage from './Percentage';
 
@@ -29,7 +29,7 @@ export default function Candidato({
 
             <div className="text-2xl text-center">{candidate.name}</div>
 
-            <Elected elected={elected} />
+            <Eleito elected={elected} />
         </div>
     );
 }
