@@ -22,11 +22,11 @@ export default function Select({
 
     return (
         <div className="flex flex-col items-center">
-            <label htmlFor={id}>{labelDescription}</label>
+            <label className='text-lg' htmlFor={id}>{labelDescription}</label>
 
             <select
                 id={id}
-                className="m-2 p-1 shadow-lg rounded-lg"
+                className="m-3 p-2 shadow-lg rounded-lg text-lg"
                 value={selectedValue.id}
                 onChange={handleSelectChange}
             >
