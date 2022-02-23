@@ -4,7 +4,7 @@
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcos-vinicius-lima/)](https://www.linkedin.com/in/marcos-vinicius-lima/)
 
 <h1 align="center">
-    <img alt="React Eleições" title="Projeto" src="https://github.com/ViniciusLima7/react-elections/blob/master/assets/img/capa.png" />
+    <img alt="React Eleições" title="Projeto" src="https://github.com/ViniciusLima7/react-elections/blob/master/public/img/capa.png" />
 </h1>
 
 # 💻 Projeto
