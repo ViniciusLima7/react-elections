@@ -2,7 +2,7 @@
 // function Header(props) {
 
 //Conceito mais moderno
-function Header({ children, size }) {
+function Header({ children = 'Titulo dO App', size }) {
   let fontSize = "text-xl";
 
   if (size === "large") {
@@ -11,10 +11,6 @@ function Header({ children, size }) {
   return (
     <header>
       <div className="  bg-blue-200 mx-auto  p-10">
-        {/* Antigo */}
-        {/* <h1 className="text-center font-semibold text-xl">{props.children}</h1> */}
-
-        {/* Novo */}
         <h1 className={`text-center font-semibold ${fontSize}`}>{children}</h1>
       </div>
     </header>
