@@ -25,9 +25,6 @@ export default function EleicoesPage() {
             const apiCities = (await apiGetAllCities())
                 .map(city => ({ ...city, description: city.name }));
 
-            // console.log("apiCandidates", apiCandidates);
-            // console.log("apiCities", apiCities);
-
             setCities(apiCities);
             setCandidates(apiCandidates);
             setInitialLoading(false);
@@ -51,8 +48,7 @@ export default function EleicoesPage() {
             if (selectedCity) {
                 setLoadingCity(true);
                 const apiElection = await apiGetAllElections(selectedCity.id);
-                // console.log("selectedCity.id", selectedCity);
-                // console.log("apiElection", apiElection);
+
                 setCurrentElection(apiElection);
             }
             setLoadingCity(false);
@@ -63,8 +59,7 @@ export default function EleicoesPage() {
 
     //Verificar Id do Select se é igual ao Id da Cidade no BackEnd e trazer dados sobre isso
     function handleCityChange(newSelectedCityId) {
-        console.log("newSelectedCityId", newSelectedCityId)
-        console.log("cities", cities)
+
         setSelectedCity(cities.find(city => city.id === newSelectedCityId));
     }
 
